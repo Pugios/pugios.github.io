@@ -4,6 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohamed Matar",
+  description: "Portfolio of Mohamed Matar — M.Sc. Computer Science graduate from TU Berlin with a background in data science and software engineering, based in Berlin.",
 };
 
 const geistSans = Geist({

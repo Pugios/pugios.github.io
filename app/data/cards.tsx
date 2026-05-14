@@ -32,7 +32,7 @@ export const CARDS: Card[] = [
       </>
     ),
     images: ["/screenshots/Gallery1.png", "/screenshots/Gallery2.png", "/screenshots/Gallery3.jpg"],
-    thumbnailPosition: "50% 35%",
+    thumbnailPosition: "50% 10%",
     thumbnailZoom: 1,
     tags: [
       { label: "AI",              color: "#6366f1" },
@@ -67,7 +67,7 @@ export const CARDS: Card[] = [
       </>
     ),
     images: ["/screenshots/TM1.png", "/screenshots/TM2.png", "/screenshots/TM3.png", "/screenshots/TM4.png"],
-    thumbnailPosition: "100% 50%",
+    thumbnailPosition: "100% 10%",
     thumbnailZoom: 1.25,
     tags: [
       { label: "Data Aggregation", color: "#ec4899" },

@@ -168,6 +168,10 @@ export default function HeroSection() {
                 </span>
               </h1>
 
+              <p className="text-white text-sm font-light tracking-wide text-center md:text-left">
+                M.Sc. Computer Science · Data Scientist &amp; Software Engineer
+              </p>
+
               <button
                 onClick={scrollToContact}
                 className="px-7 py-2 border border-white text-white text-sm rounded
