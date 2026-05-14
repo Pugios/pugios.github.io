@@ -10,18 +10,18 @@ interface StarData {
 }
 
 const STARS: StarData[] = [
-  { logo: "/icons/ibm.png",       alt: "IBM",             target: "pugio-projects" },
-  { logo: "/icons/dhbw.png",      alt: "DHBW",            target: "pugio-projects" },
+  { logo: "/icons/ibm.png",       alt: "IBM",             target: "about-ibm" },
+  { logo: "/icons/dhbw.png",      alt: "DHBW",            target: "about-dhbw" },
   { logo: "/icons/pugio.png",     alt: "Pugio",           target: "pugio-projects" },
-  { logo: "/icons/universal.png", alt: "Universal Music", target: "pugio-projects" },
-  { logo: "/icons/tu_berlin.png", alt: "TU Berlin",       target: "pugio-projects" },
+  { logo: "/icons/universal.png", alt: "Universal Music", target: "about-universal" },
+  { logo: "/icons/tu_berlin.png", alt: "TU Berlin",       target: "about-tu-berlin" },
 ];
 
 // Mobile diamond order: Pugio (2), DHBW (1), TU Berlin (4), IBM (0), Universal (3)
 const MOBILE_ORDER = [1, 0, 2, 3, 4];
 
 function scrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 function SparkleStar({ star, size }: { star: StarData; size: number }) {

@@ -65,7 +65,8 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section id="pugio-projects" className="bg-[#1f1a52] py-20 px-6">
+    <section id="pugio-projects" className="bg-[#285ea8] py-20 px-6">
+
       {/* ── 2 × 2 grid ─────────────────────────────────────────────────── */}
       <div className="max-w-3xl mx-auto grid grid-cols-2 gap-5">
         {CARDS.map((card) => (
@@ -74,7 +75,7 @@ export default function HistorySection() {
             layoutId={card.id}
             id={card.id === "master" ? "master-thesis" : undefined}
             onClick={() => setSelectedId(card.id)}
-            className="relative overflow-hidden cursor-pointer bg-[#0d1632] border border-white/25"
+            className="relative overflow-hidden cursor-pointer bg-[#002c69] border border-white/25"
             style={{ borderRadius: 16, aspectRatio: "1 / 1" }}
             whileHover={{ boxShadow: "0 0 28px 6px rgba(255,255,255,0.22)" }}
             transition={{ duration: 0.2 }}
@@ -98,21 +99,6 @@ export default function HistorySection() {
             </div>
           </motion.div>
         ))}
-      </div>
-
-      {/* ── Download CV ─────────────────────────────────────────────────── */}
-      <div id="download-cv" className="max-w-3xl mx-auto mt-10 flex justify-center">
-        <a
-          href="/docs/CV_Mohamed_Matar.pdf"
-          download
-          className="flex items-center gap-2 px-8 py-3 bg-white text-gray-900 text-sm rounded-lg
-            shadow-[0_0_8px_2px_rgba(255,255,255,0.1)]
-            hover:shadow-[0_0_24px_6px_rgba(255,255,255,0.4)]
-            transition-shadow duration-300"
-        >
-          <DownloadIcon />
-          Download Full CV
-        </a>
       </div>
 
       {/* ── Expanded overlay ─────────────────────────────────────────────── */}

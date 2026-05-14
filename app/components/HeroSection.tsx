@@ -94,17 +94,17 @@ export default function HeroSection() {
   return (
     <section className="relative flex flex-col overflow-hidden pt-16 pb-10 md:pt-20 md:pb-14">
       {/* Background */}
-      <div className="absolute inset-0 brightness-75 saturate-200 hue-rotate-20">
+      <div className="absolute inset-0 brightness-75 saturate-200">
         <Image
           src="/img/heaven.jpg"
           alt="A Cloudy Sky seen from an Airplane"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
       </div>
       {/* Fade to dark at bottom */}
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-linear-to-b from-transparent to-[#1f1a52]" />
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-linear-to-b from-transparent to-[#285ea8]" />
 
       {/* All hero content centered as one unit */}
       <div className="relative z-10 flex items-center justify-center px-6">
