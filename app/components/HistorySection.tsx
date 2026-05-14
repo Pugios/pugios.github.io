@@ -8,10 +8,10 @@ import ImageCarousel from "./ImageCarousel";
 
 // ── Small helpers ─────────────────────────────────────────────────────────────
 function GithubIcon() {
-  return <div className="relative w-5 h-5"><Image src="/icons/github.png" alt="" fill className="object-contain" /></div>;
+  return <div className="relative w-5 h-5"><Image src="/icons/github.png" alt="" fill sizes="20px" className="object-contain" /></div>;
 }
 function DownloadIcon() {
-  return <div className="relative w-5 h-5"><Image src="/icons/download.png" alt="" fill className="object-contain" /></div>;
+  return <div className="relative w-5 h-5"><Image src="/icons/download.png" alt="" fill sizes="20px" className="object-contain" /></div>;
 }
 function ExternalIcon() {
   return (

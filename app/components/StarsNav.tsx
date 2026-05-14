@@ -74,17 +74,17 @@ export default function StarsNav() {
       <div className="flex md:hidden flex-col items-center">
         {/* Row 1: DHBW + IBM */}
         <div className="flex gap-6">
-          <SparkleStar star={STARS[MOBILE_ORDER[0]]} size={76} />
-          <SparkleStar star={STARS[MOBILE_ORDER[1]]} size={76} />
+          <SparkleStar star={STARS[MOBILE_ORDER[0]]} size={125} />
+          <SparkleStar star={STARS[MOBILE_ORDER[1]]} size={125} />
         </div>
         {/* Row 2: Pugio — pulled into the gap between rows 1 and 3 */}
-        <div className="-mt-5">
-          <SparkleStar star={STARS[MOBILE_ORDER[2]]} size={76} />
+        <div className="-mt-6">
+          <SparkleStar star={STARS[MOBILE_ORDER[2]]} size={125} />
         </div>
         {/* Row 3: Universal + TU Berlin — pulled up tight */}
-        <div className="flex gap-6 -mt-5">
-          <SparkleStar star={STARS[MOBILE_ORDER[3]]} size={76} />
-          <SparkleStar star={STARS[MOBILE_ORDER[4]]} size={76} />
+        <div className="flex gap-6 -mt-6">
+          <SparkleStar star={STARS[MOBILE_ORDER[3]]} size={125} />
+          <SparkleStar star={STARS[MOBILE_ORDER[4]]} size={125} />
         </div>
       </div>
     </div>

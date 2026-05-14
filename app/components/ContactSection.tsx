@@ -54,7 +54,7 @@ export default function ContactSection() {
                 transition-shadow duration-300"
             >
               <div className="relative w-6 h-6">
-                <Image src={s.icon} alt={s.label} fill className="object-contain" />
+                <Image src={s.icon} alt={s.label} fill sizes="24px" className="object-contain" />
               </div>
             </motion.a>
           ))}

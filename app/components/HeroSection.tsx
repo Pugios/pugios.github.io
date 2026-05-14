@@ -100,7 +100,7 @@ export default function HeroSection() {
           alt="A Cloudy Sky seen from an Airplane"
           fill
           priority
-          className="object-cover object-top"
+          className="object-cover object-center"
         />
       </div>
       {/* Fade to dark at bottom */}
