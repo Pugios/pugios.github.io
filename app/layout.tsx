@@ -4,7 +4,6 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Mohamed Matar",
-  icons: { icon: "/icons/pugio.png" },
 };
 
 const geistSans = Geist({

@@ -10,11 +10,11 @@ interface StarData {
 }
 
 const STARS: StarData[] = [
-  { logo: "/icons/ibm.png",       alt: "IBM",                target: "download-cv" },
-  { logo: "/icons/dhbw.png",      alt: "DHBW",               target: "download-cv" },
-  { logo: "/icons/pugio.png",     alt: "Pugio",              target: "pugio-projects" },
-  { logo: "/icons/universal.png", alt: "Universal Music",    target: "download-cv" },
-  { logo: "/icons/tu_berlin.png", alt: "TU Berlin",          target: "master-thesis" },
+  { logo: "/icons/ibm.png",       alt: "IBM",             target: "pugio-projects" },
+  { logo: "/icons/dhbw.png",      alt: "DHBW",            target: "pugio-projects" },
+  { logo: "/icons/pugio.png",     alt: "Pugio",           target: "pugio-projects" },
+  { logo: "/icons/universal.png", alt: "Universal Music", target: "pugio-projects" },
+  { logo: "/icons/tu_berlin.png", alt: "TU Berlin",       target: "pugio-projects" },
 ];
 
 // Mobile diamond order: Pugio (2), DHBW (1), TU Berlin (4), IBM (0), Universal (3)

@@ -94,7 +94,7 @@ export default function HeroSection() {
   return (
     <section className="relative flex flex-col overflow-hidden pt-16 pb-10 md:pt-20 md:pb-14">
       {/* Background */}
-      <div className="absolute inset-0 brightness-75 saturate-200">
+      <div className="absolute inset-0 brightness-75 saturate-200 hue-rotate-20">
         <Image
           src="/img/heaven.jpg"
           alt="A Cloudy Sky seen from an Airplane"
@@ -151,7 +151,7 @@ export default function HeroSection() {
               onAnimationComplete={() => setEntryDone(true)}
             >
               <h1 className="text-white text-[2rem] md:text-[2.5rem] font-light text-center md:text-left leading-tight">
-                Salam!
+                Heyho!
                 <br />
                 I&apos;m{" "}
                 <span className="inline-flex items-baseline">
