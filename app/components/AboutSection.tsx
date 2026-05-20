@@ -26,28 +26,28 @@ const TIMELINE: TimelineEntry[] = [
     icon: "/icons/ibm.png",
     org: "IBM",
     period: "2017 - 2020",
-    description: "Completed five engineering and data science internships across IBM offices in Böblingen, Ehningen, and Armonk, New York. My Bachelor's thesis proposed a hybrid NLP model for detecting and resolving redundancies in large enterprise business glossaries.",
+    description: "Completed six engineering and data science internships across IBM offices in Böblingen, Ehningen, and Armonk, New York. My Bachelor's thesis proposed a hybrid NLP model for detecting and resolving redundancies in large enterprise business glossaries.",
   },
   {
     id: "about-universal",
     icon: "/icons/universal.png",
     org: "Universal Music Group",
     period: "2020 - 2021",
-    description: "Worked as a Data Scientist building analytical pipelines and dashboards to track artist performance and campaign impact. Enhanced a TF-IDF genre clustering system using playlist data to embed artists into a high-dimensional similarity space.",
+    description: "Working Student Internship as a Data Scientist building analytical pipelines and dashboards to track artist performance and campaign impact. Enhanced a TF-IDF genre clustering system using playlist data to embed artists into a high-dimensional similarity space.",
   },
   {
     id: "about-tu-berlin",
     icon: "/icons/tu_berlin.png",
     org: "TU Berlin",
     period: "2021 - 2025",
-    description: "Completed my M.Sc. in Computer Science with a focus on Cognitive Systems at the Technische Universität Berlin. My thesis developed a CNN-LSTM hybrid model for activity recognition in fisheye surveillance footage, graded 1.3. Continued as a Research Assistant afterwards.",
+    description: "Completed my M.Sc. in Computer Science with a focus on Cognitive Systems at the Technische Universität Berlin. My thesis developed a U-NET and LSTM hybrid model for counting Passengers on Trains. Continued as a Research Assistant afterwards.",
   },
   {
     id: "about-pugio",
     icon: "/icons/pugio.png",
     org: "Pugio",
     period: "ongoing",
-    description: "My personal label for side projects and freelance work. From native Windows apps with AI-powered features to full-stack web platforms — if it seems worth building, I build it.",
+    description: "My personal label for side projects and freelance work. I create useful Apps that solve problems. From native Windows apps with AI-powered features to full-stack web platforms - If I imagine it, I create it.",
   },
 ];
 

@@ -169,7 +169,7 @@ export default function HeroSection() {
               </h1>
 
               <p className="text-white text-sm font-light tracking-wide text-center md:text-left">
-                M.Sc. Computer Science · Data Scientist &amp; Software Engineer
+                M.Sc. Computer Science · Software Engineer
               </p>
 
               <button
