@@ -65,7 +65,7 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section id="pugio-projects" className="bg-[#285ea8] py-20 px-6">
+    <section id="pugio-projects" className="relative py-20 px-6">
 
       {/* ── 2 × 2 grid ─────────────────────────────────────────────────── */}
       <div className="max-w-3xl mx-auto grid grid-cols-2 gap-5">

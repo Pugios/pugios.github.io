@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import StarsNav from "./StarsNav";
@@ -56,70 +55,23 @@ function useCyclingName(active: boolean): string {
 }
 
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [entryDone, setEntryDone] = useState(false);
   const displayedName = useCyclingName(entryDone);
-
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    setMounted(true);
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Render a blank screen-height placeholder during SSR to avoid hydration mismatch
-  if (!mounted) {
-    return <section className="h-screen bg-[#060d1f]" />;
-  }
-
-  const portraitInitial = isMobile
-    ? { opacity: 0, x: 0, y: 70 }
-    : { opacity: 0, x: 160, y: 0 };
-
-  const textInitial = isMobile
-    ? { opacity: 0, x: 0, y: -70 }
-    : { opacity: 0, x: -160, y: 0 };
-
-  const slideTransition = {
-    duration: 0.75,
-    ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-  };
-
   return (
-    <section className="relative flex flex-col overflow-hidden pt-16 pb-10 md:pt-20 md:pb-14">
-      {/* Background */}
-      <div className="absolute inset-0 brightness-75 saturate-200">
-        <Image
-          src="/img/heaven.jpg"
-          alt="A Cloudy Sky seen from an Airplane"
-          fill
-          priority
-          className="object-cover object-top"
-        />
-      </div>
-      {/* Fade to dark at bottom */}
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-linear-to-b from-transparent to-[#285ea8]" />
-
-      {/* All hero content centered as one unit */}
-      <div className="relative z-10 flex items-center justify-center px-6">
+    <section className="relative flex flex-col pt-16 pb-10 md:pt-20 md:pb-14">
+      <div className="flex items-center justify-center px-6">
         <div className="flex flex-col items-center gap-10">
 
           {/* Portrait + Text row */}
           <div className="flex flex-col md:grid md:grid-cols-[400px_400px] items-center gap-8 md:gap-16">
 
             {/* Portrait — top on mobile, left column on desktop (fixed width so text changes never shift it) */}
-            <motion.div
-              className="md:justify-self-end"
-              initial={portraitInitial}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={slideTransition}
-            >
+            <div className="hero-portrait-enter md:justify-self-end">
               <div
                 className="relative rounded-full border-2 border-white overflow-hidden
                   shadow-[0_0_14px_4px_rgba(255,255,255,0.35)]
@@ -131,6 +83,7 @@ export default function HeroSection() {
                   src="/img/Me.jpg"
                   alt="Mohamed Matar"
                   fill
+                  sizes="400px"
                   className="object-cover"
                   style={{
                     objectPosition: "70% 50%",
@@ -140,15 +93,15 @@ export default function HeroSection() {
                   priority
                 />
               </div>
-            </motion.div>
+            </div>
 
             {/* Text + Button — bottom on mobile, right column on desktop */}
-            <motion.div
-              className="flex flex-col items-center md:items-start gap-5"
-              initial={textInitial}
-              animate={{ opacity: 1, x: 0, y: 0 }}
-              transition={slideTransition}
-              onAnimationComplete={() => setEntryDone(true)}
+            <div
+              className="hero-text-enter flex flex-col items-center md:items-start gap-5"
+              onAnimationEnd={(event) => {
+                if (event.target !== event.currentTarget) return;
+                setEntryDone(true);
+              }}
             >
               <h1 className="text-white text-[2rem] md:text-[2.5rem] font-light text-center md:text-left leading-tight">
                 Heyho!
@@ -181,7 +134,7 @@ export default function HeroSection() {
               >
                 Contact Me
               </button>
-            </motion.div>
+            </div>
           </div>
 
           {/* Stars navigation — directly below portrait+text */}
