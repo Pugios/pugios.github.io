@@ -203,22 +203,24 @@ export const CARDS: Card[] = [
   },
   {
     id: "master",
-    title: "Master Thesis",
+    title: "AI Model Architecture Research",
     shortDesc:
-      "CNN-LSTM model for activity recognition in fisheye surveillance footage — TU Berlin.",
+      "A Neural Algorithm for Automated Passenger Counting in Public Transport on a Privacy-Friendly Dataset — TU Berlin.",
     description: (
       <>
         <p>
           For my Masters in Computer Science at the Technical University of
-          Berlin I developed a hybrid CNN-LSTM architecture for activity
-          recognition in fisheye surveillance footage.
+          Berlin I developed a hybrid CNN-LSTM architecture for passenger counting through surveillance footage. 
+          After graduating I was granted a scholarship to continue my research.
         </p>
         <p className="mt-3">
-          The model uses stacked convolutional encoders with max-pooling to
-          extract spatial features from wide-angle frames, then passes the
-          resulting representations through skip-connected decoder blocks before
-          feeding into an LSTM sequence (130 → 100 → 70 units) for temporal
-          reasoning.
+          Within my research I developed several different model architecture to explore the impact of different CNN Models.
+          A large component was the U-Net Architecture, originally developed for image processing it works by first compressing image space and increasing feature space,
+          before then compressing feature space and localizing each feature back to the original image space using skip connections between encoding and decoding layers.
+          The CNN models were connected through a Dense layer to a LSTM. LSTM is a well known system for extracting information out of sequential data.
+        </p>
+        <p className="mt-3">
+          Combining both into a unified model I was able to determine the number of passengers entering and exiting a train in brandenburg with up to 95% accuracy.
         </p>
         <p className="mt-3">A copy of the thesis is available for download.</p>
       </>
