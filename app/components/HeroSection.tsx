@@ -73,7 +73,7 @@ export default function HeroSection() {
             {/* Portrait — top on mobile, left column on desktop (fixed width so text changes never shift it) */}
             <div className="hero-portrait-enter md:justify-self-end">
               <div
-                className="relative rounded-full border-2 border-white overflow-hidden
+                className="hero-portrait-frame relative rounded-full border-2 border-white overflow-hidden
                   shadow-[0_0_14px_4px_rgba(255,255,255,0.35)]
                   hover:shadow-[0_0_40px_12px_rgba(255,255,255,0.75)]
                   transition-shadow duration-300"
@@ -84,12 +84,7 @@ export default function HeroSection() {
                   alt="Mohamed Matar"
                   fill
                   sizes="400px"
-                  className="object-cover"
-                  style={{
-                    objectPosition: "70% 50%",
-                    transform: `scale(2)`,
-                    transformOrigin: "70% 50%",
-                  }}
+                  className="object-cover hero-portrait-img"
                   priority
                 />
               </div>

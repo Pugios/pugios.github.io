@@ -16,70 +16,6 @@ body {
   50% { opacity: 0; }
 }
 
-@keyframes hero-portrait-enter-mobile {
-  from {
-    opacity: 0;
-    transform: translateY(70px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes hero-portrait-enter-desktop {
-  from {
-    opacity: 0;
-    transform: translateX(160px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes hero-text-enter-mobile {
-  from {
-    opacity: 0;
-    transform: translateY(-70px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes hero-text-enter-desktop {
-  from {
-    opacity: 0;
-    transform: translateX(-160px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hero-portrait-enter {
-  opacity: 0;
-  animation: hero-portrait-enter-mobile 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.hero-text-enter {
-  opacity: 0;
-  animation: hero-text-enter-mobile 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-@media (min-width: 768px) {
-  .hero-portrait-enter {
-    animation-name: hero-portrait-enter-desktop;
-  }
-
-  .hero-text-enter {
-    animation-name: hero-text-enter-desktop;
-  }
-}
-
 @keyframes hero-slide-up {
   from {
     opacity: 0;
@@ -125,10 +61,12 @@ body {
 }
 
 .hero-portrait-enter {
+  opacity: 0;
   animation: hero-slide-up 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .hero-text-enter {
+  opacity: 0;
   animation: hero-slide-down 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
@@ -139,5 +77,29 @@ body {
 
   .hero-text-enter {
     animation-name: hero-slide-from-left;
+  }
+}
+
+/* Same visual as scale(2) + origin 70% 50%, without transform (Gecko won't clip transformed children) */
+.hero-portrait-img {
+  object-position: 70% 50%;
+  width: 200% !important;
+  height: 200% !important;
+  max-width: none !important;
+  left: -70% !important;
+  top: -50% !important;
+  right: auto !important;
+  bottom: auto !important;
+}
+
+/* Firefox: overflow+radius alone fails to clip scaled/sized descendants after animations settle */
+@supports (-moz-appearance: none) {
+  .hero-portrait-frame {
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  .hero-portrait-frame > span {
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
